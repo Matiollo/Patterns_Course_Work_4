@@ -40,9 +40,10 @@ namespace code
                 return (int)id;
             }
 
-            connection.Open();
+            
             foreach(User participant in conference.participants)
             {
+                connection.Open();
                 SqliteCommand commandAddRelation = connection.CreateCommand();
                 commandAddRelation.CommandText =
                 @"
@@ -52,10 +53,11 @@ namespace code
                 ";
                 commandAddRelation.Parameters.AddWithValue("$conference_id", id);
                 commandAddRelation.Parameters.AddWithValue("$user_id", participant.id);
-                id = (long)commandAddRelation.ExecuteScalar();                                                         // DELETE
+                commandAddRelation.ExecuteScalar();
+                System.Console.WriteLine(id);  
+                connection.Close();                                                       
             }
             
-            connection.Close();
             return (int)id;
         }
 

@@ -9,7 +9,7 @@ namespace code
             // irrelevant to the pattern idea. So I decided to skip the real implementation, printing "[Message 
             // has been sent to (username)]" in console to show that this part of code has been executed.
 
-            System.Console.WriteLine($"[Message has been sent to {user.tgUsername}]");
+            System.Console.WriteLine($"[Message has been sent to @{user.tgUsername}]");
             return true;
         }
     }

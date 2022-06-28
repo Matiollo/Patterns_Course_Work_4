@@ -230,6 +230,7 @@ namespace code
 
         public string GetMainMenuAction()
         {
+            Console.WriteLine();
             Console.WriteLine("Main Menu");
             Console.WriteLine("1. Add new conference");
             Console.WriteLine("2. See your conferences");
@@ -266,6 +267,7 @@ namespace code
 
         public string GetAddNewConferencePageAction()
         {
+            Console.WriteLine();
             Console.WriteLine("Create new conference");
             Console.WriteLine("Choose features you want to add/change:");
             Console.WriteLine("1. Add/change name");
@@ -405,6 +407,7 @@ namespace code
 
         public void PrintUsersConferencesPageHeadLine()
         {
+            Console.WriteLine();
             Console.WriteLine("To go back press \"b\"");
             Console.WriteLine();
             Console.WriteLine("Your conferences:");
@@ -413,6 +416,7 @@ namespace code
 
         public void PrintUsersConferencesInvitationsPageHeadLine()
         {
+            Console.WriteLine();
             Console.WriteLine("To go back press \"b\"");
             Console.WriteLine();
             Console.WriteLine("Conferences you have been invited to:");
@@ -507,6 +511,7 @@ namespace code
 
         public string GetEditConferencePageAction()
         {
+            Console.WriteLine();
             Console.WriteLine("Choose features you want to edit:");
             Console.WriteLine("1. Change name");
             Console.WriteLine("2. Change theme");

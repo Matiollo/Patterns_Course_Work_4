@@ -33,7 +33,7 @@ namespace code
             return user;
         }
 
-        public User LogInUser()
+        private User LogInUser()
         {
             string login = ui.GetLogin();
             string password = ui.GetPassword();
@@ -45,7 +45,7 @@ namespace code
             return user;
         }
 
-        public User RegisterUser()
+        private User RegisterUser()
         {
             string login = ui.GetLogin();
             while(this.userRep.FindByLogin(login) != null)
